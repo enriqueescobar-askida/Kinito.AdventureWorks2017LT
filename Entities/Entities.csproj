@@ -43,6 +43,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,12 +54,78 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AdventureWorks2017LTDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuildVersion.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLog.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesLT_Address.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_Customer.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_CustomerAddress.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_Product.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_ProductCategory.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_ProductDescription.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_ProductModel.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_ProductModelProductDescription.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_SalesOrderDetail.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_SalesOrderHeader.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_VGetAllCategory.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_VProductAndDescription.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesLT_VProductModelCatalogDescription.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UfnGetAllCategoriesReturnModel.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UfnGetCustomerInformationReturnModel.cs">
+      <DependentUpon>AdventureWorks2017LTDatabase.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="EF.Reverse.POCO.Core.ttinclude" />
+    <None Include="EF.Reverse.POCO.ttinclude" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdventureWorks2017LTDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdventureWorks2017LTDatabase.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
